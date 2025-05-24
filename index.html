@@ -8,23 +8,40 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #F9FAFB;
       color: #1C1C1E;
     }
     header {
+      background-color: #1C1C1E;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 40px;
+    }
+    header a {
       background-color: #EF233C;
       color: white;
-      padding: 2rem;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .hero {
       text-align: center;
+      padding: 4rem 2rem;
+      background-color: #EF233C;
+      color: white;
     }
-    header h1 {
+    .hero h1 {
       font-size: 2.5rem;
-      margin: 0;
+      margin-bottom: 1rem;
     }
-    header p {
+    .hero p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
     }
     .section {
       padding: 2rem;
@@ -33,66 +50,90 @@
     }
     .section h2 {
       color: #EF233C;
+      font-size: 1.8rem;
     }
-    .steps, .benefits {
+    .steps, .benefits, .testimonials {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      margin-top: 1rem;
     }
-    .step, .benefit {
+    .card {
       flex: 1 1 45%;
       background: white;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    .cta {
-      background: #1C1C1E;
+    .cta-section {
+      background-color: #1C1C1E;
       color: white;
       text-align: center;
       padding: 2rem;
     }
-    .cta a {
+    .cta-section a {
       background: #EF233C;
       color: white;
       padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 5px;
       display: inline-block;
       margin-top: 1rem;
+    }
+    footer {
+      background: #6B7280;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    form {
+      margin-top: 1rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Movi+</h1>
-    <p>Logística inteligente, sin fricciones.</p>
+    <img src="logo.png" alt="Movi+ Logo" />
+    <a href="#">Publicá tu carga</a>
   </header>
+
+  <section class="hero">
+    <h1>Movi+: Logística inteligente, sin fricciones</h1>
+    <p>Conectamos cargas con transportistas verificados en tiempo real.</p>
+  </section>
 
   <section class="section">
     <h2>¿Qué es Movi+?</h2>
-    <p>Movi+ es una plataforma que conecta cargas con transportistas verificados en tiempo real. Digitalizamos el transporte de carga mediana y pesada, ofreciendo eficiencia, trazabilidad total y costos optimizados desde una sola app.</p>
+    <p>Movi+ digitaliza el transporte de carga mediana y pesada. Empresas, industrias o particulares pueden publicar su necesidad y conectar con transportistas al instante, con seguimiento en tiempo real y sin intermediarios.</p>
   </section>
 
   <section class="section">
     <h2>¿Cómo funciona?</h2>
     <div class="steps">
-      <div class="step">
-        <h3>Para Clientes</h3>
+      <div class="card">
+        <h4>Clientes</h4>
         <ul>
           <li>Publicá tu carga</li>
-          <li>Recibí ofertas o confirmá un transportista</li>
+          <li>Recibí ofertas y confirmá</li>
           <li>Seguimiento en tiempo real</li>
-          <li>Recibí, calificá y finalizá</li>
+          <li>Calificá y cerrá</li>
         </ul>
       </div>
-      <div class="step">
-        <h3>Para Transportistas</h3>
+      <div class="card">
+        <h4>Transportistas</h4>
         <ul>
           <li>Registrate y completá tu perfil</li>
           <li>Recibí pedidos según tu zona</li>
-          <li>Realizá el viaje y marcá entrega</li>
-          <li>Cobrás y acumulás reputación</li>
+          <li>Realizá el viaje</li>
+          <li>Cobrás y mejorás tu reputación</li>
         </ul>
       </div>
     </div>
@@ -101,21 +142,47 @@
   <section class="section">
     <h2>Beneficios</h2>
     <div class="benefits">
-      <div class="benefit">
+      <div class="card">
         <h4>Para Clientes</h4>
-        <p>Reducí costos, ganá trazabilidad y contratá rápido sin intermediarios.</p>
+        <p>Reducción de costos, contratación rápida, trazabilidad y eficiencia.</p>
       </div>
-      <div class="benefit">
+      <div class="card">
         <h4>Para Transportistas</h4>
-        <p>Accedé a nuevos clientes, aumentá tus viajes y mejorá tu reputación.</p>
+        <p>Más viajes, más ingresos, mejor visibilidad en la red logística.</p>
       </div>
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Empezá a mover cargas con inteligencia</h2>
-    <a href="#">Publicá tu carga</a>
-    <a href="#" style="background:#6B7280; margin-left:1rem;">Quiero ser transportista</a>
+  <section class="section">
+    <h2>Lo dicen quienes ya lo usan</h2>
+    <div class="testimonials">
+      <div class="card"><strong>“Publicar una carga me llevó 30 segundos. En menos de 15 minutos ya tenía chofer.”</strong><br>— Mariana, PyME textil</div>
+      <div class="card"><strong>“Desde que uso Movi+, no tengo viajes vacíos.”</strong><br>— Pablo, transportista</div>
+    </div>
   </section>
+
+  <section class="section">
+    <h2>Contactanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Email" required />
+      <select required>
+        <option value="">Soy...</option>
+        <option value="cliente">Cliente con cargas</option>
+        <option value="transportista">Transportista</option>
+      </select>
+      <input type="submit" value="Enviar consulta" />
+    </form>
+  </section>
+
+  <section class="cta-section">
+    <h2>Empezá a mover cargas con inteligencia</h2>
+    <a href="#">Quiero ser transportista</a>
+    <a href="#" style="background:#6B7280; margin-left:1rem;">Publicá una carga</a>
+  </section>
+
+  <footer>
+    © 2025 Movi+. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
