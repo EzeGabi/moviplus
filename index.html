@@ -163,10 +163,10 @@
 
   <section class="section">
     <h2>Contactanos</h2>
-    <form>
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="email" placeholder="Email" required />
-      <select required>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwAaRr1oOjP8FLv21iKsPR7KxZ5nOJ2LpmtM7AD23v65vF2PAvjHNUHHwsgkqSGCtDAFQ/exec">
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="tipo" required>
         <option value="">Soy...</option>
         <option value="cliente">Cliente con cargas</option>
         <option value="transportista">Transportista</option>
