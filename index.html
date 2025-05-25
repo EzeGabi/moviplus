@@ -35,8 +35,6 @@
       padding: 4rem 2rem;
       background-color: #EF233C;
       color: white;
-      position: relative;
-      overflow: hidden;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -44,16 +42,6 @@
     }
     .hero p {
       font-size: 1.2rem;
-    }
-    .animation {
-      position: absolute;
-      bottom: 10px;
-      left: -200px;
-      animation: drive 10s linear infinite;
-    }
-    @keyframes drive {
-      0% { left: -200px; }
-      100% { left: 110%; }
     }
     .section {
       padding: 2rem;
@@ -64,10 +52,11 @@
       color: #EF233C;
       font-size: 1.8rem;
     }
-    .steps, .benefits {
+    .steps, .benefits, .testimonials {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      margin-top: 1rem;
     }
     .card {
       flex: 1 1 45%;
@@ -98,6 +87,16 @@
       text-align: center;
       font-size: 0.9rem;
     }
+    form {
+      margin-top: 1rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -109,7 +108,6 @@
   <section class="hero">
     <h1>Movi+: Logística inteligente, sin fricciones</h1>
     <p>Conectamos cargas con transportistas verificados en tiempo real.</p>
-    <img src="truck.png" class="animation" alt="Camión en movimiento" width="150" />
   </section>
 
   <section class="section">
@@ -139,6 +137,42 @@
         </ul>
       </div>
     </div>
+  </section>
+
+  <section class="section">
+    <h2>Beneficios</h2>
+    <div class="benefits">
+      <div class="card">
+        <h4>Para Clientes</h4>
+        <p>Reducción de costos, contratación rápida, trazabilidad y eficiencia.</p>
+      </div>
+      <div class="card">
+        <h4>Para Transportistas</h4>
+        <p>Más viajes, más ingresos, mejor visibilidad en la red logística.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Lo dicen quienes ya lo usan</h2>
+    <div class="testimonials">
+      <div class="card"><strong>“Publicar una carga me llevó 30 segundos. En menos de 15 minutos ya tenía chofer.”</strong><br>— Mariana, PyME textil</div>
+      <div class="card"><strong>“Desde que uso Movi+, no tengo viajes vacíos.”</strong><br>— Pablo, transportista</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contactanos</h2>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwAaRr1oOjP8FLv21iKsPR7KxZ5nOJ2LpmtM7AD23v65vF2PAvjHNUHHwsgkqSGCtDAFQ/exec">
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="tipo" required>
+        <option value="">Soy...</option>
+        <option value="cliente">Cliente con cargas</option>
+        <option value="transportista">Transportista</option>
+      </select>
+      <input type="submit" value="Enviar consulta" />
+    </form>
   </section>
 
   <section class="cta-section">
